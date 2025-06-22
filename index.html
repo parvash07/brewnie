@@ -2,51 +2,90 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brewnie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#2D1E12">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Brewnie | Artisanal Coffee Experience</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="coffee-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <div class="loading-container">
+            <div class="coffee-beans">
+                <div class="coffee-bean"></div>
+                <div class="coffee-bean"></div>
+                <div class="coffee-bean"></div>
+                <div class="coffee-bean"></div>
+                <div class="coffee-bean"></div>
+            </div>
+            <div class="loading-text">Brewnie</div>
+            <div class="loading-subtitle">Brewing Excellence</div>
+            <div class="loading-progress">
+                <div class="loading-progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="custom-cursor"></div>
+    
     <nav class="navbar">
         <div class="nav-container">
+            <div class="nav-blur"></div>
             <a href="#" class="logo">Brewnie</a>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </label>
             <div class="nav-links">
+                <label for="menu-toggle" class="mobile-menu-close">
+                    <i class="fas fa-times"></i>
+                </label>
                 <a href="#menu">Menu</a>
                 <a href="#about">About</a>
+                <a href="#experience">Experience</a>
                 <a href="#contact">Contact</a>
-            </div>
-            <div class="mobile-menu-toggle">
-                <i class="fas fa-bars"></i>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <div class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Time to Discover<br>the Tastiest Coffee</h1>
-            <p>Where every cup tells a story</p>
+            <span class="subtitle">Est. 2018</span>
+            <h1>Time to Discover<br>the <em>Finest</em> Coffee</h1>
+            <p>Where every cup tells a story of heritage and craftsmanship</p>
             <a href="#menu" class="cta-button">Explore Menu</a>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <i class="fas fa-chevron-down"></i>
         </div>
     </div>
 
-    <!-- Coffee Menu -->
     <section class="menu" id="menu">
         <div class="section-header">
+            <span class="overline">Taste Distinction</span>
             <h2>Our Signature Brews</h2>
             <div class="divider">
                 <i class="fas fa-coffee"></i>
             </div>
         </div>
         <div class="menu-container">
-            <!-- Espresso -->
             <div class="menu-item">
                 <div class="item-image">
-                    <img src="images/espresso.jpg" alt="Espresso">
+                    <div class="blur-card"></div>
+                    <img src="images/espresso.jpg" alt="Espresso" loading="lazy">
                     <div class="price-tag">$3.20</div>
                 </div>
                 <div class="item-details">
@@ -60,13 +99,14 @@
                     </div>
                     <p class="quote">"The pure essence of coffee in its most concentrated form"</p>
                     <p class="fact">First patented in 1884 Italy, the heart of all coffee drinks</p>
+                    <a href="#" class="menu-btn">Select</a>
                 </div>
             </div>
 
-            <!-- Cappuccino -->
             <div class="menu-item reverse">
                 <div class="item-image">
-                    <img src="images/cappuccino.jpg" alt="Cappuccino">
+                    <div class="blur-card"></div>
+                    <img src="images/cappuccino.jpg" alt="Cappuccino" loading="lazy">
                     <div class="price-tag">$4.50</div>
                 </div>
                 <div class="item-details">
@@ -80,12 +120,13 @@
                     </div>
                     <p class="quote">"A perfect balance of strong, sweet, and smooth"</p>
                     <p class="fact">Named after Capuchin monks' brown robes</p>
+                    <a href="#" class="menu-btn">Select</a>
                 </div>
             </div>
 
-            <!-- Latte -->
             <div class="menu-item">
                 <div class="item-image">
+                    <div class="blur-card"></div>
                     <img src="images/latte.jpg" alt="Latte">
                     <div class="price-tag">$4.75</div>
                 </div>
@@ -96,16 +137,16 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
                     </div>
                     <p class="quote">"Smooth, creamy, and comforting - the perfect morning hug in a cup"</p>
                     <p class="fact">Latte art became popular in the 1980s and is now an iconic coffee trend</p>
+                    <a href="#" class="menu-btn">Select</a>
                 </div>
             </div>
 
-            <!-- Mocha -->
             <div class="menu-item reverse">
                 <div class="item-image">
+                    <div class="blur-card"></div>
                     <img src="images/mocha.jpg" alt="Mocha">
                     <div class="price-tag">$5.25</div>
                 </div>
@@ -120,12 +161,13 @@
                     </div>
                     <p class="quote">"Where coffee meets chocolate - a match made in heaven"</p>
                     <p class="fact">Originates from the Yemeni port city of Mocha, a historical coffee hub</p>
+                    <a href="#" class="menu-btn">Select</a>
                 </div>
             </div>
 
-            <!-- Americano -->
             <div class="menu-item">
                 <div class="item-image">
+                    <div class="blur-card"></div>
                     <img src="images/americano.jpg" alt="Americano">
                     <div class="price-tag">$3.75</div>
                 </div>
@@ -140,14 +182,18 @@
                     </div>
                     <p class="quote">"Bold, simple, and timeless - just like the classics"</p>
                     <p class="fact">Created during WWII when American soldiers diluted espresso with hot water</p>
+                    <a href="#" class="menu-btn">Select</a>
                 </div>
             </div>
         </div>
+        <div class="section-footer">
+            <a href="#" class="view-more">View Full Menu <i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
     </section>
 
-    <!-- About Section -->
     <section class="about" id="about">
         <div class="section-header">
+            <span class="overline">Heritage & Tradition</span>
             <h2>Our Story</h2>
             <div class="divider">
                 <i class="fas fa-leaf"></i>
@@ -156,25 +202,157 @@
         <div class="about-container">
             <div class="about-image">
                 <img src="images/about-coffee.jpg" alt="Coffee beans">
+                <div class="about-blur"></div>
+                <div class="about-badge">
+                    <span>Est.</span>
+                    <span class="year">2018</span>
+                </div>
             </div>
             <div class="about-content">
                 <h3>Passion in Every Cup</h3>
                 <p>Founded in 2018, Brewnie was born from a simple idea: that coffee should be an experience, not just a drink. Our master baristas select only the finest beans from sustainable farms around the world.</p>
                 <p>Every cup we serve is crafted with precision, passion, and a deep appreciation for the art of coffee making. We believe in creating a space where coffee lovers can gather, connect, and savor moments of joy.</p>
+                <div class="signature">Thomas Brewnie</div>
                 <a href="#contact" class="secondary-button">Get in Touch</a>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <section class="experience" id="experience">
+        <div class="experience-blur"></div>
+        <div class="section-header light">
+            <span class="overline">Elevated Experience</span>
+            <h2>The Brewnie Atmosphere</h2>
+            <div class="divider">
+                <i class="fas fa-gem"></i>
+            </div>
+        </div>
+        <div class="experience-gallery">
+            <div class="gallery-item large">
+                <img src="images/interior-1.jpg" alt="Elegant coffee shop interior">
+                <div class="overlay-blur"></div>
+                <div class="gallery-caption">
+                    <h3>Classic Elegance</h3>
+                    <p>Timeless design meets modern comfort</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cup-1.jpg" alt="Artfully prepared coffee">
+                <div class="overlay-blur"></div>
+                <div class="gallery-caption">
+                    <h3>Artisan Quality</h3>
+                    <p>Every cup is a masterpiece</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/detail-1.jpg" alt="Elegant details">
+                <div class="overlay-blur"></div>
+                <div class="gallery-caption">
+                    <h3>Refined Details</h3>
+                    <p>It's all in the little things</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/pastry-1.jpg" alt="Gourmet pastries">
+                <div class="overlay-blur"></div>
+                <div class="gallery-caption">
+                    <h3>Gourmet Pairings</h3>
+                    <p>Perfect companions to your coffee</p>
+                </div>
+            </div>
+        </div>
+        <div class="testimonials">
+            <div class="testimonial">
+                <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
+                <p>Brewnie offers the most exquisite coffee experience I've found in the city. The ambiance is simply unmatched.</p>
+                <div class="testimonial-author">
+                    <span class="name">Eleanor White</span>
+                    <span class="title">Art Collector</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="contact" id="contact">
         <div class="section-header">
+            <span class="overline">Connect With Us</span>
             <h2>Visit Us</h2>
             <div class="divider">
                 <i class="fas fa-map-marker-alt"></i>
             </div>
         </div>
-        <div class="contact-container">
+        <div class="location-showcase">
+            <div class="location-card">
+                <div class="location-header">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Find Us in the Heart of Brooklyn</h3>
+                </div>
+                <div class="location-content">
+                    <div class="location-visual">
+                        <div class="map-illustration">
+                            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="300" fill="var(--background)"/>
+                                <line x1="0" y1="150" x2="400" y2="150" stroke="var(--primary-light)" stroke-width="3" opacity="0.6"/>
+                                <line x1="200" y1="0" x2="200" y2="300" stroke="var(--primary-light)" stroke-width="3" opacity="0.6"/>
+                                <line x1="0" y1="100" x2="400" y2="100" stroke="var(--primary-light)" stroke-width="2" opacity="0.4"/>
+                                <line x1="0" y1="200" x2="400" y2="200" stroke="var(--primary-light)" stroke-width="2" opacity="0.4"/>
+                                <line x1="100" y1="0" x2="100" y2="300" stroke="var(--primary-light)" stroke-width="2" opacity="0.4"/>
+                                <line x1="300" y1="0" x2="300" y2="300" stroke="var(--primary-light)" stroke-width="2" opacity="0.4"/>
+                                <rect x="50" y="80" width="40" height="40" fill="var(--primary)" opacity="0.7" rx="3"/>
+                                <rect x="320" y="60" width="50" height="60" fill="var(--primary)" opacity="0.7" rx="3"/>
+                                <rect x="250" y="180" width="35" height="35" fill="var(--primary)" opacity="0.7" rx="3"/>
+                                <rect x="80" y="220" width="45" height="45" fill="var(--primary)" opacity="0.7" rx="3"/>
+                                <rect x="175" y="125" width="50" height="50" fill="var(--accent)" rx="5" stroke="var(--primary-dark)" stroke-width="2"/>
+                                <circle cx="200" cy="150" r="8" fill="var(--primary-dark)"/>
+                                <text x="200" y="155" text-anchor="middle" fill="var(--white)" font-size="12" font-weight="bold">B</text>
+                                <circle cx="190" cy="140" r="3" fill="var(--accent)" opacity="0.8"/>
+                                <circle cx="210" cy="140" r="3" fill="var(--accent)" opacity="0.8"/>
+                                <circle cx="190" cy="160" r="3" fill="var(--accent)" opacity="0.8"/>
+                                <circle cx="210" cy="160" r="3" fill="var(--accent)" opacity="0.8"/>
+                                <circle cx="200" cy="150" r="15" fill="none" stroke="var(--accent)" stroke-width="2" opacity="0.6">
+                                    <animate attributeName="r" values="15;25;15" dur="2s" repeatCount="indefinite"/>
+                                    <animate attributeName="opacity" values="0.6;0;0.6" dur="2s" repeatCount="indefinite"/>
+                                </circle>
+                            </svg>
+                        </div>
+                        <div class="location-badge">
+                            <i class="fas fa-coffee"></i>
+                            <span>DUMBO District</span>
+                        </div>
+                    </div>
+                    <div class="location-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>123 Coffee Street<br>DUMBO, Brooklyn NY 11201</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-subway"></i>
+                            <div>
+                                <h4>Transportation</h4>
+                                <p>High St-Brooklyn Bridge<br>2 min walk from station</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-parking"></i>
+                            <div>
+                                <h4>Parking</h4>
+                                <p>Street parking available<br>Brooklyn Bridge Park nearby</p>
+                            </div>
+                        </div>
+                        <div class="directions-btn">
+                            <a href="https://maps.google.com/maps?q=DUMBO,Brooklyn,NY" target="_blank" class="secondary-button">
+                                <i class="fas fa-directions"></i>
+                                Get Directions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact-container" style="margin-top: 4rem;">
             <div class="contact-info">
                 <div class="info-item">
                     <i class="fas fa-map-marker-alt"></i>
@@ -193,25 +371,30 @@
                 </div>
             </div>
             <div class="contact-form">
+                <div class="form-blur"></div>
                 <h3>Send us a message</h3>
                 <form>
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
+                    <div class="form-group full-width">
                         <textarea placeholder="Your Message" required></textarea>
                     </div>
-                    <button type="submit" class="cta-button">Send Message</button>
+                    <div class="form-submit">
+                        <button type="submit" class="cta-button">Send Message</button>
+                    </div>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
+        <div class="footer-blur"></div>
         <div class="footer-container">
             <div class="footer-section">
                 <a href="#" class="footer-logo">Brewnie</a>
@@ -226,6 +409,7 @@
                 <h3>Quick Links</h3>
                 <a href="#menu">Menu</a>
                 <a href="#about">Our Story</a>
+                <a href="#experience">Experience</a>
                 <a href="#contact">Contact</a>
                 <a href="#">Careers</a>
             </div>
@@ -242,11 +426,57 @@
             <p>&copy; 2025 Brewnie. All rights reserved.</p>
         </div>
     </footer>
-
+    
     <script>
-        // Simple mobile menu toggle
-        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.querySelector('.navbar');
+            const cursor = document.querySelector('.custom-cursor');
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            
+            setTimeout(() => {
+                loadingOverlay.classList.add('hidden');
+                setTimeout(() => {
+                    loadingOverlay.remove();
+                }, 800);
+            }, 3500);
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+            
+            document.addEventListener('mousemove', function(e) {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+            
+            document.addEventListener('mousedown', function() {
+                cursor.classList.add('click');
+            });
+            
+            document.addEventListener('mouseup', function() {
+                cursor.classList.remove('click');
+            });
+
+            const animatedElements = document.querySelectorAll('.menu-item, .about-container, .gallery-item, .testimonial, .contact-info, .contact-form');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            animatedElements.forEach(el => {
+                observer.observe(el);
+            });
         });
     </script>
 </body>
