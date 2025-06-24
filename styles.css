@@ -186,8 +186,6 @@ p {
     opacity: 1;
 }
 
-/* This section is removed - mobile blur adjustments moved to proper media query */
-
 .logo {
     font-family: 'Great Vibes', cursive;
     font-size: 3rem;
@@ -297,7 +295,6 @@ p {
     transform-origin: center;
 }
 
-/* Animated transformation when menu is open */
 #menu-toggle:checked + .mobile-menu-toggle span:nth-child(1) {
     transform: rotate(45deg) translate(6px, 6px);
     background: var(--primary);
@@ -1299,28 +1296,8 @@ p {
 }
 
 @media (max-width: 768px) {
-    .location-content {
-        grid-template-columns: 1fr;
-    }
-    
-    .location-visual {
-        padding: 2rem;
-    }
-    
-    .location-details {
-        padding: 2rem;
-    }
-    
-    .location-header {
-        padding: 2rem;
-    }
-    
-    .location-header h3 {
-        font-size: 1.8rem;
-    }
-    
-    .detail-item {
-        gap: 1rem;
+    .custom-cursor {
+        display: none;
     }
 }
 
@@ -1744,7 +1721,6 @@ p {
 }
 
 @media (max-width: 768px) {
-    /* Mobile Navigation */
     .mobile-menu-toggle {
         display: flex;
         position: relative;
@@ -1856,7 +1832,6 @@ p {
         background: var(--primary);
     }
     
-    /* Mobile Hero Section */
     .hero {
         height: 100vh;
         padding: 0 1rem;
@@ -1889,7 +1864,6 @@ p {
         font-size: 0.7rem;
     }
     
-    /* Mobile Menu Section */
     .menu {
         padding: 6rem 1rem;
     }
@@ -1969,7 +1943,6 @@ p {
         align-self: center;
     }
     
-    /* Mobile About Section */
     .about {
         padding: 6rem 1rem;
     }
@@ -2027,7 +2000,6 @@ p {
         max-width: 200px;
     }
     
-    /* Mobile Experience Section */
     .experience {
         padding: 6rem 1rem;
     }
@@ -2076,7 +2048,6 @@ p {
         font-size: 1.1rem;
     }
     
-    /* Mobile Contact Section */
     .contact {
         padding: 6rem 1rem;
     }
@@ -2136,7 +2107,6 @@ p {
         font-size: 0.85rem;
     }
     
-    /* Mobile Map */
     .map-container {
         margin: 3rem 1rem 0;
     }
@@ -2146,7 +2116,6 @@ p {
         border-radius: 12px;
     }
     
-    /* Mobile Footer */
     .footer {
         padding: 4rem 1rem 2rem;
     }
@@ -2231,7 +2200,6 @@ p {
     background: var(--accent);
 }
 
-
 @media (max-width: 768px) {
     .nav-links::before {
         content: '';
@@ -2250,7 +2218,6 @@ p {
         backdrop-filter: blur(40px);
     }
     
-    /* Mobile menu animation enhancements */
     .nav-links a {
         opacity: 0;
         transform: translateX(30px);
